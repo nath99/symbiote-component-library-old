@@ -1,6 +1,8 @@
 import React from 'react';
 import Accordion from './Accordion';
 
+import "./Accordion.scss";
+
 export default {
     title: "Accordion"
 }

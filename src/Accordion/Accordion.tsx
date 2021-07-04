@@ -2,7 +2,7 @@ import React from "react";
 
 import { AccordionProps } from "./Accordion.types";
 
-import "./Accordion.scss";
+// import "./Accordion.scss";
 
 const Accordion: React.FC<AccordionProps> = ({ accordionContent }) => (
   <div
