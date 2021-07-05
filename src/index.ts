@@ -1,4 +1,4 @@
-import TestComponent from "./TestComponent/TestComponent";
-import Accordion from "./Accordion/Accordion";
+import Button from "./Components/Atoms/Button/Button";
+import Accordion from "./Components/Molecules/Accordion/Accordion";
 
-export { TestComponent, Accordion };
+export { Accordion, Button };
