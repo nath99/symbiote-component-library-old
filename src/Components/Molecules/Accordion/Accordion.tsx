@@ -1,8 +1,10 @@
 import React from "react";
 
-import { AccordionProps } from "./Accordion.types";
-
 import "../../../styles/molecules/Accordion.scss";
+
+export interface AccordionProps {
+    accordionContent: {title: string, content: string}[]
+}
 
 export default class Accordion extends React.Component<AccordionProps> {
   render() {

@@ -7,11 +7,10 @@ export interface ButtonProps {
   enabled?: boolean
 }
 
-import "./Button.scss";
+import "../../../styles/atoms/Button";
 
 export default class Button extends React.Component<ButtonProps> {
   static defaultProps = {
-    type: 'primary',
     enabled: true
   }
 
@@ -19,7 +18,7 @@ export default class Button extends React.Component<ButtonProps> {
     return (
         <button
           data-testid="button"
-          className={`button ${this.props.type}`}>{this.props.children}</button>
+          className={`button ${this.props.type} ${this.props.size} ${this.props.style}` + (this.props.enabled ? '': ' disabled')}>{this.props.children}</button>
     )
   }
 }

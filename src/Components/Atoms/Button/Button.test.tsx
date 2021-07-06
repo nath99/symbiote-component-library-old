@@ -21,26 +21,44 @@ describe("Button Component", () => {
     it("Should have primary class", () => {
         const { getByTestId } = renderComponent();
 
-        const primaryButton = getByTestId("button");
+        const testButton = getByTestId("button");
 
-        expect(primaryButton).toHaveClass("primary");
+        expect(testButton).toHaveClass("primary");
     });
 
     it("Should have secondary class", () => {
         buttonProps.type = 'secondary';
         const { getByTestId } = renderComponent();
 
-        const secondaryButton = getByTestId("button");
+        const testButton = getByTestId("button");
 
-        expect(secondaryButton).toHaveClass("secondary");
+        expect(testButton).toHaveClass("secondary");
     });
 
-    it("Should have tertiary class", () => {
-        buttonProps.type = 'tertiary';
+    it("Should have md size class", () => {
+        buttonProps.size = 'md';
         const { getByTestId } = renderComponent();
 
-        const tertiaryButton = getByTestId("button");
+        const testButton = getByTestId("button");
 
-        expect(tertiaryButton).toHaveClass("tertiary");
+        expect(testButton).toHaveClass("md");
+    });
+
+    it("Should have outline-dark class", () => {
+        buttonProps.style = 'outline-dark';
+        const { getByTestId } = renderComponent();
+
+        const testButton = getByTestId("button");
+
+        expect(testButton).toHaveClass("outline-dark");
+    });
+
+    it("Should be disabled", () => {
+        buttonProps.enabled = false;
+        const { getByTestId } = renderComponent();
+
+        const testButton = getByTestId("button");
+
+        expect(testButton).toHaveClass("disabled");
     });
 });
