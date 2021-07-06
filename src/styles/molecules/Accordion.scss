@@ -1,5 +1,4 @@
-$accordion-heading-background-color: #267CB5;
-$accordion-heading-foreground-color: #ffffff;
+@import '../base.scss';
 
 .accordion {
     overflow: hidden;

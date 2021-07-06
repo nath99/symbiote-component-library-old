@@ -7,7 +7,7 @@ export interface ButtonProps {
   enabled?: boolean
 }
 
-import "../../../styles/atoms/Button";
+import "../../../styles/atoms/Button.scss";
 
 export default class Button extends React.Component<ButtonProps> {
   static defaultProps = {
