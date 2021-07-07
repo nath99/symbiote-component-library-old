@@ -3,5 +3,13 @@
 @import 'variables/settings';
 @import 'variables/fonts';
 
+// Import core styles
+@import 'core/mixins';
+@import 'core/grid';
+@import 'core/icons';
+@import 'core/normalize';
+@import 'core/layout';
+@import 'core/screen-reader';
+
 // Import atoms
-@import 'atoms/mixins';
+@import 'atoms/typography';

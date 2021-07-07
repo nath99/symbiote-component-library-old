@@ -79,8 +79,6 @@
     &.wide-card {
         display: flex;
         flex-direction: row;
-        min-height: 19rem;
-        max-height: 19rem;
         border-radius: 0.25rem;
         overflow: hidden;
         @include card-shadow();
@@ -114,9 +112,6 @@
             min-height: unset;
 
             .content {
-                min-height: 19rem;
-                max-height: 19rem;
-
                 h3 {
                     margin: 0.7rem 0;
                 }

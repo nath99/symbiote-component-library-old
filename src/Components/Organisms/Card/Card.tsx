@@ -34,26 +34,26 @@ export default class Card extends React.Component<Props> {
 
         return (
             <div className={`col-xs-12 ${wide ? "col-sm-8" : "col-sm-4"}`}>
-                <div className={`card ${(image && fullImage) ? "full-image-card " : image ? "" : "no-image "} ${wide ? "wide-card" : ""}`}>
+                <div className={`card ${(image && fullImage) ? "full-image-card " : image ? "" : "no-image "}`}>
 
-                    <div className={`${wide ? "" : "card-wrapper"}`} style={wide ? {} : {
+                    <div className={`${wide ? "card wide-card" : "card-wrapper"}`} style={wide ? {} : {
                         backgroundImage: `url(${image})`
                     }}>
                         {/* Optional date */}
                         {date &&
                             <div className="date">
-                                <span className="day">{date.getDay}</span>
+                                <span className="day">{date.getDay()}</span>
                                 <span className="month">{this.getMonthString(date)}</span>
-                                <span className="year">{date.getFullYear}</span>
+                                <span className="year">{date.getFullYear()}</span>
                             </div>
                         }
                         <div className="content">
-                            {topic && <p className="inverted">Topic</p>}
-                            {heading && <h3 className="inverted">{heading}</h3>}
-                            {body && <p className="inverted">{body}</p>}
+                            {topic && <p className={`${fullImage ? "inverted" : ""}`}>{topic}</p>}
+                            {heading && <h3 className={`${fullImage ? "inverted" : ""}`}>{heading}</h3>}
+                            {body && <p className={`${fullImage ? "inverted" : ""}`}>{body}</p>}
                             {callToActionText && callToActionLink &&
                                 <div className="button-container">
-                                    <button className="cta inverted">Read more</button>
+                                    <button className={`cta {${fullImage ? " inverted" : ""}`}>{callToActionText}</button>
                                 </div>
                             }
                         </div>
