@@ -5,8 +5,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Accordion from "./Accordion";
-import { AccordionProps } from "./Accordion.types";
+import Accordion, { AccordionProps } from "./Accordion";
 
 describe("Accordion Component", () => {
     let accordionProps: AccordionProps;
