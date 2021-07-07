@@ -5,5 +5,6 @@ import Breadcrumbs from "./Components/Molecules/Breadcrumbs/Breadcrumbs";
 import Card from "./Components/Organisms/Card/Card";
 import Label from "./Components/Atoms/Label/Label"
 import List from "./Components/Atoms/List/List"
+import Radio from "./Components/Atoms/Radio/Radio"
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List };
+export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio };
