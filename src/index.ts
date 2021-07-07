@@ -7,5 +7,6 @@ import Label from "./Components/Atoms/Label/Label"
 import List from "./Components/Atoms/List/List"
 import Radio from "./Components/Atoms/Radio/Radio"
 import Toggle from "./Components/Atoms/Toggle/Toggle";
+import Select from "./Components/Atoms/Select/Select";
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio, Toggle };
+export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio, Toggle, Select };
