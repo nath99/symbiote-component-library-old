@@ -1,3 +1,5 @@
+import "./styles/base.scss";
+
 import Button from "./Components/Atoms/Button/Button";
 import Checkbox from "./Components/Atoms/Checkbox/Checkbox";
 import Accordion from "./Components/Molecules/Accordion/Accordion";
@@ -14,6 +16,5 @@ import Tooltip from "./Components/Atoms/Tooltip/Tooltip";
 import Table from "./Components/Atoms/Table/Table";
 import Hero from "./Components/Organisms/Hero/Hero";
 import Notification from "./Components/Organisms/Notification/Notification";
-import "./styles/base.scss";
 
 export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, Footer, List, Radio, Toggle, Select, ProgressBar, Tooltip, Table, Hero, Notification };
