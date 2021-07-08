@@ -8,5 +8,6 @@ import List from "./Components/Atoms/List/List"
 import Radio from "./Components/Atoms/Radio/Radio"
 import Toggle from "./Components/Atoms/Toggle/Toggle";
 import Select from "./Components/Atoms/Select/Select";
+import ProgressBar from "./Components/Molecules/ProgressBar/ProgressBar";
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio, Toggle, Select };
+export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio, Toggle, Select, ProgressBar };
