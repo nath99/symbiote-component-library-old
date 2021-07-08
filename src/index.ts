@@ -10,5 +10,6 @@ import Toggle from "./Components/Atoms/Toggle/Toggle";
 import Select from "./Components/Atoms/Select/Select";
 import ProgressBar from "./Components/Molecules/ProgressBar/ProgressBar";
 import Tooltip from "./Components/Atoms/Tooltip/Tooltip";
+import Table from "./Components/Atoms/Table/Table";
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio, Toggle, Select, ProgressBar, Tooltip };
+export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, List, Radio, Toggle, Select, ProgressBar, Tooltip, Table };
