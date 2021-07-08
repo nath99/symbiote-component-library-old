@@ -1,14 +1,15 @@
 // Import variables
 @import 'variables/colors';
 @import 'variables/settings';
-@import 'variables/fonts';
+
+@import 'variables/mixins';
 
 // Import core styles
-@import 'core/mixins';
 @import 'core/grid';
 @import 'core/icons';
 @import 'core/normalize';
 @import 'core/layout';
+@import 'core/fonts';
 @import 'core/screen-reader';
 
 // Import atoms

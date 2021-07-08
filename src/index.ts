@@ -4,5 +4,8 @@ import Accordion from "./Components/Molecules/Accordion/Accordion";
 import Breadcrumbs from "./Components/Molecules/Breadcrumbs/Breadcrumbs";
 import Card from "./Components/Organisms/Card/Card";
 import Label from "./Components/Atoms/Label/Label"
+import Footer from "./Components/Organisms/Footer/Footer"
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label };
+import "./styles/base.scss";
+
+export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, Footer};
