@@ -16,5 +16,6 @@ import Tooltip from "./Components/Atoms/Tooltip/Tooltip";
 import Table from "./Components/Atoms/Table/Table";
 import Hero from "./Components/Organisms/Hero/Hero";
 import Notification from "./Components/Organisms/Notification/Notification";
+import Pagination from "./Components/Molecules/Pagination/Pagination";
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, Footer, List, Radio, Toggle, Select, ProgressBar, Tooltip, Table, Hero, Notification };
+export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, Footer, List, Radio, Toggle, Select, ProgressBar, Tooltip, Table, Hero, Notification, Pagination };
