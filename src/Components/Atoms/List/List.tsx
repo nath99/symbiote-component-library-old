@@ -1,19 +1,17 @@
 import React from "react";
 
-import "../../../styles/atoms/List.scss";
-
 interface ListItem {
     itemText: string,
     children?: ListItem[]
 }
 
-export interface ListProps {
+interface ListProps {
     listContent: ListItem[],
     ordered?: boolean,
     parent?: boolean
 }
 
-export default class List extends React.Component<ListProps> {
+class List extends React.Component<ListProps> {
     static defaultProps = {
         ordered: false,
         parent: true
@@ -45,3 +43,5 @@ export default class List extends React.Component<ListProps> {
         }
     }
 }
+
+export { ListItem, List };

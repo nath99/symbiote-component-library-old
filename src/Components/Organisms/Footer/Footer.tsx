@@ -1,5 +1,4 @@
 import React from "react"
-import "../../../styles/organisms/Footer.scss";
 
 interface FooterLink {
     footerlabel: string,
@@ -30,7 +29,7 @@ interface Props {
     copyright?: Copyright
 }
 
-export default class Footer extends React.Component<Props> {
+class Footer extends React.Component<Props> {
     render() {
         const {
             footerLists,
@@ -102,3 +101,5 @@ export default class Footer extends React.Component<Props> {
         )
     }
 }
+
+export { FooterLink, FooterList, SocialLinks, Copyright, Footer };

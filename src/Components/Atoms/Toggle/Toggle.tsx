@@ -1,13 +1,11 @@
 import React from "react";
 
-import "../../../styles/atoms/Toggle.scss";
-
-export interface ToggleProps {
+interface ToggleProps {
     toggleLabel: string,
     toggleId?: string
 }
 
-export default class Toggle extends React.Component<ToggleProps> {
+class Toggle extends React.Component<ToggleProps> {
     render() {
         let generateId = ():string => {
             const id = Math.random().toString(36).substring(7);
@@ -35,3 +33,5 @@ export default class Toggle extends React.Component<ToggleProps> {
         )
     }
 }
+
+export { Toggle };

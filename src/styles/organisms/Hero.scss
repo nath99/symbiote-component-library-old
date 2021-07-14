@@ -62,15 +62,15 @@
 
     // Below calculations are to match the existing column alignment even though this container is set to position: absolute;
     @include media-breakpoint-up(sm) {
-        left: calc((100vw - (#{$grid-breakpoints(sm)} + #{$grid-gutter-width})) / 2);
+        left: calc((100vw - (#{map-get($grid-breakpoints, "sm")} + #{$grid-gutter-width})) / 2);
     }
 
     @include media-breakpoint-up(md) {
-        left: calc((100vw - (#{$grid-breakpoints(md)} + #{$grid-gutter-width})) / 2);
+        left: calc((100vw - (#{map-get($grid-breakpoints, "md")} + #{$grid-gutter-width})) / 2);
     }
 
     @include media-breakpoint-up(lg) {
-        left: calc((100vw - (#{$grid-breakpoints(lg)} + #{$grid-gutter-width})) / 2);
+        left: calc((100vw - (#{map-get($grid-breakpoints, "lg")} + #{$grid-gutter-width})) / 2);
     }
 
     &.center {
@@ -88,15 +88,15 @@
 
         // Below calculations are to match the existing column alignment even though this container is set to position: absolute;
         @include media-breakpoint-up(sm) {
-            right: calc((100vw - (#{$grid-breakpoints(sm)} - #{$grid-gutter-width})) / 2);
+            right: calc((100vw - (#{map-get($grid-breakpoints, "sm")} - #{$grid-gutter-width})) / 2);
         }
 
         @include media-breakpoint-up(md) {
-            right: calc((100vw - (#{$grid-breakpoints(md)} - #{$grid-gutter-width})) / 2);
+            right: calc((100vw - (#{map-get($grid-breakpoints, "md")} - #{$grid-gutter-width})) / 2);
         }
 
         @include media-breakpoint-up(lg) {
-            right: calc((100vw - (#{$grid-breakpoints(lg)} - #{$grid-gutter-width})) / 2);
+            right: calc((100vw - (#{map-get($grid-breakpoints, "lg")} - #{$grid-gutter-width})) / 2);
         }
     }
 

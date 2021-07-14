@@ -1,17 +1,15 @@
 import React from "react";
 
-import "../../../styles/molecules/Pagination.scss";
-
 interface PageProp {
     link: string
 }
 
-export interface PaginationProps {
+interface PaginationProps {
     pages: PageProp[],
     currentPage: number
 }
 
-export default class Pagination extends React.Component<PaginationProps> {
+class Pagination extends React.Component<PaginationProps> {
     render() {
         const {
             pages,
@@ -51,3 +49,5 @@ export default class Pagination extends React.Component<PaginationProps> {
         )
     }
 }
+
+export { Pagination };
