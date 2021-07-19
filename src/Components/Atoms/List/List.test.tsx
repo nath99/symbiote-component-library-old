@@ -4,8 +4,12 @@
 
 import React from "react";
 import { render } from "@testing-library/react";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import List, { ListProps } from "./List";
+
+    // Add Accessibility testing
+expect.extend(toHaveNoViolations)
 
 describe("List Component", () => {
     let listProps: ListProps;
@@ -18,10 +22,18 @@ describe("List Component", () => {
 
     const renderComponent = () => render(<List {...listProps} />);
 
-    it("Should have styled-list class", () => {
+    it("Should have no accessibility violations", async () => {
+        const { container } = renderComponent();
+
+        const results = await axe(container)
+
+        expect(results).toHaveNoViolations()
+    });
+
+    it("Should have styled-list class", async () => {
         const { getByTestId } = renderComponent();
 
-        const testComponent = getByTestId("list");
+        const testComponent = await getByTestId("list");
 
         expect(testComponent).toHaveClass("styled-list");
     });

@@ -4,8 +4,12 @@
 
 import React from "react";
 import { render } from "@testing-library/react";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import Checkbox, { CheckboxProps } from "./Checkbox";
+
+    // Add Accessibility testing
+expect.extend(toHaveNoViolations)
 
 describe("Checkbox Component", () => {
     let checkboxProps: CheckboxProps;
@@ -18,11 +22,19 @@ describe("Checkbox Component", () => {
 
     const renderComponent = () => render(<Checkbox {...checkboxProps} />);
 
-    it("Should have checkbox class", () => {
+    it("Should have no accessibility violations", async () => {
+        const { container } = renderComponent();
+
+        const results = await axe(container)
+
+        expect(results).toHaveNoViolations()
+    });
+
+    it("Should have checkbox class", async () => {
         const { getByTestId } = renderComponent();
 
-        const testButton = getByTestId("checkbox");
+        const testComponent = await getByTestId("checkbox");
 
-        expect(testButton).toHaveClass("checkbox");
+        expect(testComponent).toHaveClass("checkbox");
     });
 });

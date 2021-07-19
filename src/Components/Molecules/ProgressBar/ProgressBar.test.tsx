@@ -4,8 +4,12 @@
 
 import React from "react";
 import { render } from "@testing-library/react";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import ProgressBar, { ProgressBarProps } from "./ProgressBar";
+
+    // Add Accessibility testing
+expect.extend(toHaveNoViolations)
 
 describe("Progress Bar Component", () => {
     let progressBarProps: ProgressBarProps;
@@ -22,10 +26,18 @@ describe("Progress Bar Component", () => {
 
     const renderComponent = () => render(<ProgressBar {...progressBarProps} />);
 
-    it("Should have progress-bar class", () => {
+    it("Should have no accessibility violations", async () => {
+        const { container } = renderComponent();
+
+        const results = await axe(container)
+
+        expect(results).toHaveNoViolations()
+    });
+
+    it("Should have progress-bar class", async () => {
         const { getByTestId } = renderComponent();
 
-        const testComponent = getByTestId("progress-bar");
+        const testComponent = await getByTestId("progress-bar");
 
         expect(testComponent).toHaveClass("progress-bar");
     });

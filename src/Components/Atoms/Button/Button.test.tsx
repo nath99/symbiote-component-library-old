@@ -4,61 +4,75 @@
 
 import React from "react";
 import { render } from "@testing-library/react";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 import Button, { ButtonProps } from "./Button";
 
+    // Add Accessibility testing
+expect.extend(toHaveNoViolations)
+
 describe("Button Component", () => {
-    let buttonProps: ButtonProps;
+    let buttonProps: ButtonProps,
+        buttonText: string;
 
     beforeEach(() => {
+        buttonText = 'Button Test'
         buttonProps = {
             type: 'primary'
         }
     });
 
-    const renderComponent = () => render(<Button {...buttonProps} />);
+    const renderComponent = () => render(<Button {...buttonProps}>{buttonText}</Button>);
 
-    it("Should have primary class", () => {
-        const { getByTestId } = renderComponent();
+    it("Should have no accessibility violations", async () => {
+        const { container } = renderComponent();
 
-        const testButton = getByTestId("button");
+        const results = await axe(container)
 
-        expect(testButton).toHaveClass("primary");
+        expect(results).toHaveNoViolations()
     });
 
-    it("Should have secondary class", () => {
+    it("Should have primary class", async () => {
+        const { getByTestId } = renderComponent();
+
+        const testComponent = await getByTestId("button");
+
+        expect(testComponent).toHaveClass("primary");
+    });
+
+    it("Should have secondary class", async () => {
         buttonProps.type = 'secondary';
         const { getByTestId } = renderComponent();
 
-        const testButton = getByTestId("button");
+        const testComponent = await getByTestId("button");
 
-        expect(testButton).toHaveClass("secondary");
+        expect(testComponent).toHaveClass("secondary");
     });
 
-    it("Should have md size class", () => {
+    it("Should have md size class", async () => {
         buttonProps.size = 'md';
         const { getByTestId } = renderComponent();
 
-        const testButton = getByTestId("button");
+        const testComponent = await getByTestId("button");
 
-        expect(testButton).toHaveClass("md");
+        expect(testComponent).toHaveClass("md");
     });
 
-    it("Should have outline-dark class", () => {
+    it("Should have outline-dark class", async () => {
         buttonProps.style = 'outline-dark';
         const { getByTestId } = renderComponent();
 
-        const testButton = getByTestId("button");
+        const testComponent = await getByTestId("button");
 
-        expect(testButton).toHaveClass("outline-dark");
+        expect(testComponent).toHaveClass("outline-dark");
     });
 
-    it("Should be disabled", () => {
+    it("Should be disabled", async () => {
         buttonProps.enabled = false;
         const { getByTestId } = renderComponent();
 
-        const testButton = getByTestId("button");
+        const testComponent = await getByTestId("button");
 
-        expect(testButton).toHaveClass("disabled");
+        expect(testComponent).toHaveClass("disabled");
     });
 });
