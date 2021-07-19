@@ -1,21 +1,23 @@
-import "./styles/base.scss";
+// Atoms
+export {default as Button} from "Components/Atoms/Button";
+export {default as Checkbox} from "Components/Atoms/Checkbox";
+export {default as Icon} from "Components/Atoms/Icon";
+export {default as Label} from "Components/Atoms/Label";
+export {default as List} from "Components/Atoms/List";
+export {default as Radio} from "Components/Atoms/Radio";
+export {default as Select} from "Components/Atoms/Select";
+export {default as Table} from "Components/Atoms/Table";
+export {default as Toggle} from "Components/Atoms/Toggle";
+export {default as Tooltip} from "Components/Atoms/Tooltip";
 
-import Button from "./Components/Atoms/Button/Button";
-import Checkbox from "./Components/Atoms/Checkbox/Checkbox";
-import Accordion from "./Components/Molecules/Accordion/Accordion";
-import Breadcrumbs from "./Components/Molecules/Breadcrumbs/Breadcrumbs";
-import Card from "./Components/Organisms/Card/Card";
-import Label from "./Components/Atoms/Label/Label"
-import Footer from "./Components/Organisms/Footer/Footer"
-import List from "./Components/Atoms/List/List"
-import Radio from "./Components/Atoms/Radio/Radio"
-import Toggle from "./Components/Atoms/Toggle/Toggle";
-import Select from "./Components/Atoms/Select/Select";
-import ProgressBar from "./Components/Molecules/ProgressBar/ProgressBar";
-import Tooltip from "./Components/Atoms/Tooltip/Tooltip";
-import Table from "./Components/Atoms/Table/Table";
-import Hero from "./Components/Organisms/Hero/Hero";
-import Notification from "./Components/Organisms/Notification/Notification";
-import Pagination from "./Components/Molecules/Pagination/Pagination";
+// Molecules
+export {default as Accordion} from "Components/Molecules/Accordion";
+export {default as Breadcrumbs} from "Components/Molecules/Breadcrumbs";
+export {default as Pagination} from "Components/Molecules/Pagination";
+export {default as ProgressBar} from "Components/Molecules/ProgressBar";
 
-export { Accordion, Button, Breadcrumbs, Card, Checkbox, Label, Footer, List, Radio, Toggle, Select, ProgressBar, Tooltip, Table, Hero, Notification, Pagination };
+// Organisms
+export {default as Card} from "Components/Organisms/Card";
+export {default as Footer} from "Components/Organisms/Footer";
+export {default as Hero} from "Components/Organisms/Hero";
+export {default as Notification} from "Components/Organisms/Notification";

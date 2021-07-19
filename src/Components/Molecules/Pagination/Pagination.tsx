@@ -19,7 +19,7 @@ export default class Pagination extends React.Component<PaginationProps> {
         } = this.props;
 
         return (
-            <ul className="pagination" role="menubar" aria-label="Pages">
+            <ul className="pagination" role="menubar" aria-label="Pages" data-testid="pagination">
                 {currentPage > 1 &&
                     <li className="previous">
                         <button>

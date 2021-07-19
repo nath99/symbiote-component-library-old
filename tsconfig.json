@@ -8,11 +8,16 @@
     "sourceMap": true,
     "jsx": "react",
     "moduleResolution": "node",
+    "rootDir": "src",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     //"strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src/",
+    "paths": {
+      "components": ["src/Components/*"]
+    }
   },
   "include": [
     "src/**/*"
@@ -21,6 +26,12 @@
     "node_modules",
     "build",
     "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
-  ]
+    "src/**/*.test.tsx",
+    "dist",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest"
+  ],
+  "types": ["typePatches"]
 }
