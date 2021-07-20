@@ -11,10 +11,6 @@ export interface IconProps {
 }
 
 export default class Icon extends React.Component<IconProps> {
-    static defaultProps = {
-        inverted: false
-    }
-
     render() {
         const {
             icon,

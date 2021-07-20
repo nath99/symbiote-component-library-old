@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../styles/organisms/Card.scss";
 
-interface Props {
+export interface CardProps {
     image?: string
     fullImage: boolean
     wide?: boolean
@@ -13,7 +13,7 @@ interface Props {
     callToActionLink?
 }
 
-export default class Card extends React.Component<Props> {
+export default class Card extends React.Component<CardProps> {
     getMonthString(d: Date): string {
         const days = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -34,7 +34,7 @@ export default class Card extends React.Component<Props> {
 
         return (
             <div className={`col-xs-12 ${wide ? "col-sm-8" : "col-sm-4"}`}>
-                <div className={`card ${(image && fullImage) ? "full-image-card " : image ? "" : "no-image "}`}>
+                <div className={`card ${(image && fullImage) ? "full-image-card " : image ? "" : "no-image "}`} data-testid="card">
 
                     <div className={`${wide ? "card wide-card" : "card-wrapper"}`} style={wide ? {} : {
                         backgroundImage: `url(${image})`
