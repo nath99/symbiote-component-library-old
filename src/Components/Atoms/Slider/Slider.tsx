@@ -7,6 +7,7 @@ export interface SliderProps {
     value?: number,
     min?: number,
     max?: number,
+    sliderId?: string
 }
 
 interface SliderState {
@@ -32,6 +33,12 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
     }
 
     render() {
+        let generateId = ():string => {
+            const id = Math.random().toString(36).substring(7);
+
+            return "checkbox-" + id
+        }
+
         const {
             min,
             max
@@ -41,11 +48,16 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
             value
         } = this.state;
 
+        let sliderId = this.props.sliderId;
+
+        if(!sliderId)
+            sliderId = generateId();
+
         return (
-            <div className="slider">
-                <input type="range" min={min} max={max} value={value} onChange={this.handleChange} />
+            <label className="slider" data-testid="slider" htmlFor={sliderId}>
+                <input type="range" id={sliderId} min={min} max={max} value={value} onChange={this.handleChange} />
                 <span className="value">{value}</span>
-            </div>
+            </label>
         )
     }
 }
