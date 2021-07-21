@@ -1,10 +1,11 @@
-import './styles/styles.scss';
 export * from './Components/Atoms/Button/Button';
 export * from './Components/Atoms/Checkbox/Checkbox';
+export * from './Components/Atoms/Icon/Icon';
 export * from './Components/Atoms/Label/Label';
 export * from './Components/Atoms/List/List';
 export * from './Components/Atoms/Radio/Radio';
 export * from './Components/Atoms/Select/Select';
+export * from './Components/Atoms/Slider/Slider';
 export * from './Components/Atoms/Table/Table';
 export * from './Components/Atoms/Toggle/Toggle';
 export * from './Components/Atoms/Tooltip/Tooltip';
