@@ -11,6 +11,7 @@ import Select from "./Components/Atoms/Select/Select";
 import Tooltip from "./Components/Atoms/Tooltip/Tooltip";
 import Table from "./Components/Atoms/Table/Table";
 import Slider from "./Components/Atoms/Slider/Slider";
+import Icon from "./Components/Atoms/Icon/Icon"
 
 // Molecules
 import Accordion from "./Components/Molecules/Accordion/Accordion";
@@ -24,4 +25,4 @@ import Footer from "./Components/Organisms/Footer/Footer"
 import Hero from "./Components/Organisms/Hero/Hero";
 import Notification from "./Components/Organisms/Notification/Notification";
 
-export { Button, Checkbox, Label, List, Radio, Toggle, Select, Tooltip, Table, Slider, Accordion, Breadcrumbs, ProgressBar, Pagination, Card, Footer, Hero, Notification };
+export { Button, Checkbox, Label, List, Radio, Toggle, Select, Tooltip, Table, Slider, Icon, Accordion, Breadcrumbs, ProgressBar, Pagination, Card, Footer, Hero, Notification };
