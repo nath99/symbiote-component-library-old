@@ -1,13 +1,11 @@
 import React from "react";
 
-import "../../../styles/atoms/Checkbox.scss";
-
-export interface CheckboxProps {
+interface CheckboxProps {
     checkboxLabel: string,
     checkboxId?: string
 }
 
-export default class Checkbox extends React.Component<CheckboxProps> {
+class Checkbox extends React.Component<CheckboxProps> {
     render() {
         let generateId = ():string => {
             const id = Math.random().toString(36).substring(7);
@@ -34,3 +32,5 @@ export default class Checkbox extends React.Component<CheckboxProps> {
         )
     }
 }
+
+export { Checkbox };

@@ -1,13 +1,11 @@
 import React from "react";
 
-import "../../../styles/molecules/ProgressBar.scss";
-
 interface ProgressStep {
     label: string,
     complete: boolean
 }
 
-export interface ProgressBarProps {
+interface ProgressBarProps {
     progressSteps: ProgressStep[],
     progressId?: string
 }
@@ -48,3 +46,5 @@ export default class ProgressBar extends React.Component<ProgressBarProps> {
         )
     }
 }
+
+export {ProgressStep, ProgressBar};

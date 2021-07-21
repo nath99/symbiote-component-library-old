@@ -1,8 +1,6 @@
 import React from "react";
 
-import "../../../styles/atoms/Table.scss";
-
-export interface TableProps {
+interface TableProps {
     tableContent: {
         tableHeader: string[],
         tableBody: { rowCols: string[] }[]
@@ -10,8 +8,8 @@ export interface TableProps {
     tableId?: string
 }
 
-export default class Table extends React.Component<TableProps> {
-    createMarkup(text) {
+class Table extends React.Component<TableProps> {
+    createMarkup(text: string) {
         return {__html: text}
     }
 
@@ -52,3 +50,5 @@ export default class Table extends React.Component<TableProps> {
         )
     }
 }
+
+export { Table };

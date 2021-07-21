@@ -38,7 +38,7 @@ table {
     }
 }
 
-@media all and (max-width: $grid-breakpoints(xs)) {
+@include media-breakpoint-down(xs) {
     table, thead, tbody, th, td, tr {
         display: block;
     }

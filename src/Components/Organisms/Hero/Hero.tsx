@@ -1,8 +1,6 @@
 import React from "react";
 
-import "../../../styles/organisms/Hero.scss";
-
-export interface HeroProps {
+interface HeroProps {
     image: {
         src: string,
         alt: string
@@ -17,7 +15,7 @@ export interface HeroProps {
     contentPosition?: 'left'|'right'|'center'
 }
 
-export default class Hero extends React.Component<HeroProps> {
+class Hero extends React.Component<HeroProps> {
     generateCta() {
         if(!this.props.callToAction)
             return '';
@@ -60,3 +58,5 @@ export default class Hero extends React.Component<HeroProps> {
         )
     }
 }
+
+export { Hero };

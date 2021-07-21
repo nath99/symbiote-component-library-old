@@ -1,14 +1,13 @@
 import React from "react";
 
-import "../../../styles/atoms/Button.scss";
-export interface ButtonProps {
+interface ButtonProps {
   type?: 'primary'|'secondary'|'tertiary',
   size?: 'lg'|'md'|'sm'|'xs',
   style?: 'outline-light'|'outline-dark'|'cta',
   enabled?: boolean
 }
 
-export default class Button extends React.Component<ButtonProps> {
+class Button extends React.Component<ButtonProps> {
   static defaultProps = {
     enabled: true
   }
@@ -21,3 +20,6 @@ export default class Button extends React.Component<ButtonProps> {
     )
   }
 }
+
+
+export { Button };

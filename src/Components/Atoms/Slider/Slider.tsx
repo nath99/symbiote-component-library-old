@@ -1,17 +1,14 @@
 import React from "react";
 
-// Import scss here
-import "../../../styles/atoms/Slider.scss";
-
 export interface SliderProps {
-    value?: number,
+    value?: string,
     min?: number,
     max?: number,
     sliderId?: string
 }
 
 interface SliderState {
-    value: number
+    value: string
 }
 
 export default class Slider extends React.Component<SliderProps, SliderState> {
@@ -21,15 +18,22 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
         value: 0
     }
 
-    constructor(props) {
+    constructor(props: SliderProps) {
         super(props);
 
-        this.state = {value: props.value};
+        if (props.value) {
+            this.state = {
+                value: props.value
+            };
+        }
+
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(e) {
-        this.setState({value: e.target.value})
+    handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+            this.setState(
+                {value: e.target.value}
+            )
     }
 
     render() {

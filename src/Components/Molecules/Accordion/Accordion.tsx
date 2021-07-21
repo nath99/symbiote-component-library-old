@@ -1,12 +1,10 @@
 import React from "react";
 
-import "../../../styles/molecules/Accordion.scss";
-
-export interface AccordionProps {
+interface AccordionProps {
     accordionContent: {title: string, content: string}[]
 }
 
-export default class Accordion extends React.Component<AccordionProps> {
+class Accordion extends React.Component<AccordionProps> {
   render() {
       return (
           <div
@@ -25,3 +23,5 @@ export default class Accordion extends React.Component<AccordionProps> {
       )
   }
 }
+
+export { Accordion };

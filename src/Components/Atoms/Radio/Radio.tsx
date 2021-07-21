@@ -1,19 +1,17 @@
 import React from "react";
 
-import "../../../styles/atoms/Radio.scss";
-
 interface RadioItem {
     radioLabel: string,
     radioValue?: string,
     radioSelected?: boolean
 }
 
-export interface RadioProps {
+interface RadioProps {
     radioItems: RadioItem[]
     radioId?: string
 }
 
-export default class Radio extends React.Component<RadioProps> {
+class Radio extends React.Component<RadioProps> {
     render() {
         let generateId = ():string => {
             const id = Math.random().toString(36).substring(7);
@@ -50,3 +48,5 @@ export default class Radio extends React.Component<RadioProps> {
         )
     }
 }
+
+export { RadioItem, Radio };

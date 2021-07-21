@@ -1,7 +1,5 @@
 import React from "react";
-import "../../../styles/organisms/Card.scss";
-
-export interface CardProps {
+interface Props {
     image?: string
     fullImage: boolean
     wide?: boolean
@@ -9,11 +7,10 @@ export interface CardProps {
     topic?: string
     heading?: string
     body?: string
-    callToActionText?
-    callToActionLink?
+    callToActionText?: string
+    callToActionLink?: string
 }
-
-export default class Card extends React.Component<CardProps> {
+class Card extends React.Component<Props> {
     getMonthString(d: Date): string {
         const days = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -69,3 +66,5 @@ export default class Card extends React.Component<CardProps> {
         )
     }
 }
+
+export { Card };

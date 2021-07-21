@@ -1,15 +1,14 @@
 import React from "react";
 
-import "../../../styles/organisms/Notification.scss";
 
-export interface NotificationProps {
+interface NotificationProps {
     status: "information"|"success"|"warning"|"error",
     text?: string,
-    callToActionLink?,
-    callToActionText?
+    callToActionLink? : string,
+    callToActionText? : string
 }
 
-export default class Notification extends React.Component<NotificationProps> {
+class Notification extends React.Component<NotificationProps> {
     getNotificationIcon() {
         if(this.props.status === 'success') {
             return 'la-check-circle';
@@ -49,3 +48,5 @@ export default class Notification extends React.Component<NotificationProps> {
         )
     }
 }
+
+export { Notification };

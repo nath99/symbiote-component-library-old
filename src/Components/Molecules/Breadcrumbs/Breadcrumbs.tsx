@@ -1,6 +1,4 @@
 import React from "react";
-import "../../../styles/molecules/Breadcrumbs.scss";
-
 interface Breadcrumb {
     breadcrumbLabel: string,
     breadcrumbLink: string
@@ -39,3 +37,5 @@ export default class Breadcrumbs extends React.Component<Props> {
         )
     }
 }
+
+export {Breadcrumb, Breadcrumbs};

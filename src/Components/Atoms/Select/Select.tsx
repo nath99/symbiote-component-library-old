@@ -1,20 +1,18 @@
 import React from "react";
 
-import "../../../styles/atoms/Select.scss";
-
 interface SelectItem {
     label: string,
     value?: string,
     selected?: boolean
 }
 
-export interface SelectProps {
+interface SelectProps {
     selectLabel: string,
     selectItems: SelectItem[],
     selectId?: string
 }
 
-export default class Select extends React.Component<SelectProps> {
+class Select extends React.Component<SelectProps> {
     render() {
         let generateId = ():string => {
             const id = Math.random().toString(36).substring(7);
@@ -47,3 +45,5 @@ export default class Select extends React.Component<SelectProps> {
         )
     }
 }
+
+export { SelectItem, Select };
