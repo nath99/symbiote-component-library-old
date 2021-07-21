@@ -1,3 +1,5 @@
+import './styles/styles.scss'
+
 // Export Atoms
 export * from './Components/Atoms/Button/Button';
 export * from './Components/Atoms/Checkbox/Checkbox';
